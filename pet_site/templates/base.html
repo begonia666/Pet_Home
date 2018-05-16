@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static "css/pet_style2.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/pet_style1.css" %}">
 
 
 
@@ -42,11 +42,11 @@
                 {% endif %}
 
                 <li class="nav-item">
-                    <a class="navbar-brand" href="#"><i class="fas fa-asterisk"></i> About</a>
+                    <a class="navbar-brand" href="{% url 'about_page' %}"><i class="fas fa-asterisk"></i> About</a>
                 </li>
-                <li class="nav-item">
-                    <a class="navbar-brand" href="#"><i class="fas fa-phone-volume"></i> Contact</a>
-                </li>
+{#                <li class="nav-item">#}
+{#                    <a class="navbar-brand" href="#"><i class="fas fa-phone-volume"></i> Contact</a>#}
+{#                </li>#}
             </ul>
             <ul class="navbar-nav ml-auto">
 
@@ -84,13 +84,13 @@
 
 
 
-<div class="container">
 
-    {% block body_block %}
 
-    {% endblock %}
+{% block body_block %}
 
-</div>
+{% endblock %}
+
+
 
 
 

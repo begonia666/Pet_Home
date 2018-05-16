@@ -24,6 +24,8 @@ urlpatterns = [
 
     url(r'^$', views.HomePage.as_view(), name='home_page'),
 
+    url(r'^about/', views.AboutPage.as_view(), name='about_page'),
+
     url(r'^accounts/', include('accounts.urls', namespace='accounts')),
 
     url(r'^appointment/', include('appointment.urls', namespace='appointment')),
