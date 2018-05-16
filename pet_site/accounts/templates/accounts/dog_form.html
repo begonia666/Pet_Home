@@ -1,0 +1,45 @@
+
+{% extends "empty_base.html" %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+{% block body_block %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+<link href="{% static 'css/datepicker.css' %}" rel="stylesheet" media="screen">
+
+
+<script type="text/javascript" src="{% static 'js/jquery-1.8.3.min.js' %}" charset="UTF-8"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap-datepicker.js' %}" charset="UTF-8"></script>
+
+
+    <div id="main_window">
+        <h1>
+            {% if not form.instance.master.pk %}
+            Add Dog
+            {% else %}
+            Update Dog Info
+            {% endif %}
+        </h1>
+        <form method="POST">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <button type="submit" value="Submit" class="btn btn-success">Submit <i class="fas fa-cloud-upload-alt"></i></button>
+
+            <a class="btn btn-danger" href="{% url 'accounts:login_home' %}">
+                 <i class="fas fa-home"></i> Back To Home
+            </a>
+
+        </form>
+    </div>
+
+        <script type="text/javascript">
+
+            $('#dog_birth_picker').datepicker(options={
+                format:'yyyy-mm-dd',
+                autoclose: true,
+
+            });
+        </script>
+
+{% endblock %}

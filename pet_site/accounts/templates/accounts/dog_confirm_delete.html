@@ -1,0 +1,29 @@
+{% extends "empty_base.html" %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+{% block body_block %}
+
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <div id="main_window">
+
+        <form method="post">
+            {% csrf_token %}
+            <p>Dear {{ object.username }}</p>
+            <p>Are you sure you want to delete "{{ object.dog_name }}"?</p>
+
+            <button type="submit" class="btn btn-danger" value="Delete">Confirm <i class="fas fa-check-circle"></i></button>
+
+            <a class="btn btn-warning" href="{% url 'accounts:profile' pk=object.client_pk %}">
+                Cancel <i class="fas fa-times-circle"></i>
+            </a>
+
+
+        </form>
+    </div>
+
+
+{% endblock %}
+
+
+
+

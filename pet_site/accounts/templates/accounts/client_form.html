@@ -1,0 +1,26 @@
+{% extends "empty_base.html" %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+{% block body_block %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <div id="main_window">
+
+        <h1>
+            {% if form.instance.pk %}
+            Update Client Info
+            {% endif %}
+        </h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <button type="submit" value="Submit" class="btn btn-success">Submit <i class="fas fa-cloud-upload-alt"></i></button>
+
+        </form>
+
+    </div>
+
+
+
+
+{% endblock %}

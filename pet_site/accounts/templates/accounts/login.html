@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+{% block body_block %}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <div class="container">
+        <div id="main_window">
+            <form method="post" action="#">
+                {% csrf_token %}
+                <h3>~ Log In ~</h3>
+                <p>
+                    <span>
+                        <label for="login_email">Email: </label>
+                    </span>
+                    <input type="email" name="userEmail" placeholder="Email" required>
+                </p>
+                <p>
+                    <span>
+                        <label for="login_password">Password: </label>
+                    </span>
+                    <input type="password" name="userPassword" placeholder="Password" required>
+                </p>
+                <p>
+                    <button class="btn btn-success" type="submit" value="Login">Log In <i class="fas fa-arrow-circle-up"></i></button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

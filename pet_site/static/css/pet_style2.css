@@ -1,0 +1,87 @@
+body {
+    background: url(https://www.brianfoxband.com/wp-content/uploads/2017/06/want-A-Pet-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Gugi', cursive;
+}
+
+
+html {
+    height: 100%;
+}
+
+#content {
+    text-align: center;
+    padding-top: 20%;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px orange,
+    0px 18px 23px yellow;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 5em;
+}
+
+
+hr {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.selected {
+    background: #bfdef4;
+    border-radius: 50%;
+    transition: all 1.00s;
+    -webkit-transition: all 1.00s;
+    -moz-transition: all 1.00s;
+}
+
+.mouseOn {
+    font-weight: bold;
+}
+
+
+/*login*/
+#main_window h3 {
+    text-shadow: 0 4px 5px dodgerblue;
+    text-transform: uppercase;
+    background: #79aec8;
+}
+
+#main_window span{
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+    color: black;
+}
+
+
+
+#main_window{
+    box-shadow: 10px 5px 5px black;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    width: auto;
+    height: auto;
+    margin: 60px auto;
+    background: #D3959B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BFE6BA, #D3959B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BFE6BA, #D3959B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+}
+
+
+
+input:focus {
+    border: 2px solid #2980b9;
+    outline: none;
+}
+
+
+
+
+
