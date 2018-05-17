@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static "css/pet_style.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/pet_site_style.css" %}">
 
 
 
@@ -39,14 +39,13 @@
                     <a class="navbar-brand" href="{% url 'home_page' %}" id="home_button"><i class="fas fa-home"></i> Home</a>
                 </li>
 
-                {% endif %}
-
                 <li class="nav-item">
                     <a class="navbar-brand" href="{% url 'about_page' %}"><i class="fas fa-asterisk"></i> About</a>
                 </li>
-{#                <li class="nav-item">#}
-{#                    <a class="navbar-brand" href="#"><i class="fas fa-phone-volume"></i> Contact</a>#}
-{#                </li>#}
+                {% endif %}
+
+
+
             </ul>
             <ul class="navbar-nav ml-auto">
 

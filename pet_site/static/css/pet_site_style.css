@@ -102,3 +102,6 @@ input:focus {
     box-shadow: #fff 5px 5px 25px;
 }
 
+#main_window:hover{
+    box-shadow: #fff 5px 5px 25px;
+}
