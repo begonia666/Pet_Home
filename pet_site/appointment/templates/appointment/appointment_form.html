@@ -20,9 +20,9 @@
     <div id="main_window">
         <h1>
             {% if not form.instance.client.pk %}
-            Make Appointment
+                <h3>~ Make Appointment ~</h3>
             {% else %}
-            Your Appointment
+                <h3>~ Your Appointment ~</h3>
             {% endif %}
         </h1>
         <form method="POST">

@@ -8,29 +8,29 @@
         <h3>~ User Profile ~</h3>
         <div class="row">
             <div class="col">
-                <h4>Client</h4>
+                <h4  style="text-decoration:underline">Client Info</h4>
 
-                <p><span>Nick Name</span></p>
+                <p><nobr>- * Nick Name * -</nobr></p>
                 <p>{{ client_details.user_name }}</p>
 
 
-                <p><span>Email</span></p>
+                <p><nobr>- * Email * -</nobr></p>
                 <p>{{ client_details.email }}</p>
 
 
-                <p><span>Home Address</span></p>
+                <p><nobr>- * Home Address * -</nobr></p>
                 <p>{{ client_details.home_address }}</p>
 
 
-                <p><span>Mobile Phone</span></p>
+                <p><nobr>- * Mobile Phone * -</nobr></p>
                 <p>{{ client_details.mobile_phone }}</p>
 
 
-                <p><span>Work Phone</span></p>
+                <p><nobr>- * Work Phone * -</nobr></p>
                 <p>{{ client_details.work_phone }}</p>
 
 
-                <p><span>Home Phone</span></p>
+                <p><nobr>- * Home Phone * -</nobr></p>
                 <p>{{ client_details.home_phone }}</p>
 
 
@@ -42,21 +42,22 @@
 
 
                 <div class="col">
-                    <h4>Dog</h4>
+                    <h4 style="text-decoration:underline">Dog Info</h4>
 
-                    <p><span>Dog Name</span></p>
+                    <p><nobr>- * Dog Name * -</nobr></p>
+
                     <p>{{ each_dog.dog_name }}</p>
 
 
-                    <p><span>Dog Breed</span></p>
+                    <p><nobr>- * Dog Breed * -</nobr></p>
                     <p>{{ each_dog.get_dog_breed_display }}</p>
 
 
-                    <p><span>Dog Birth</span></p>
+                    <p><nobr>- * Dog Birth * -</nobr></p>
                     <p>{{ each_dog.dog_birth }}</p>
 
 
-                    <p><span>Dog Description:</span></p>
+                    <p><nobr>- * Dog Description * -</nobr></p>
                     <p>{{ each_dog.dog_description }}</p>
 
 

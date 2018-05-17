@@ -49,21 +49,32 @@ hr {
 
 /*login*/
 #main_window h3 {
+    width: auto;
+    border-radius: 100px;
     text-shadow: 0 4px 5px dodgerblue;
     text-transform: uppercase;
     background: #79aec8;
 }
 
-#main_window span{
+button {
+    border-radius: 100px;
+}
+
+#main_window nobr{
     display: inline-block;
-    text-align: right;
+    text-align: center;
     width: 100px;
     color: black;
 }
 
+#main_window p{
 
+    color: whitesmoke;
+
+}
 
 #main_window{
+    border-radius: 70px;
     box-shadow: 10px 5px 5px black;
     padding-top: 3px;
     padding-bottom: 5px;

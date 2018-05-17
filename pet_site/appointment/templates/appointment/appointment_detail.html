@@ -23,17 +23,15 @@
                         {% for each_appointment in appointment_detail %}
                             <div class="col">
 
-
-                                <p><span>Client</span></p>
                                 <p>{{ each_appointment.client.user_name }}</p>
 
-                                <p><span>Server Type</span></p>
+                                <p><nobr>- * Server Type * -</nobr></p>
                                 <p>{{ each_appointment.get_service_option_display }}</p>
 
-                                <p><span>Appointment Date</span></p>
+                                <p><nobr>- * Appointment Date * -</nobr></p>
                                 <p>{{ each_appointment.appointment_date }}</p>
 
-                                <p><span>Appointment Time</span></p>
+                                <p><nobr>- * Appointment Time * -</nobr></p>
                                 <p>{{ each_appointment.appointment_time }}</p>
 
 
@@ -43,7 +41,7 @@
                                 </a>
 
                                 <a href="{% url 'appointment:make_comment' pk=each_appointment.pk%}">
-                                    <button class="btn btn-warning">Make a Comment <i class="fas fa-edit"></i>
+                                    <button class="btn btn-secondary">Make a Comment <i class="fas fa-edit"></i>
                                     </button>
                                 </a>
 

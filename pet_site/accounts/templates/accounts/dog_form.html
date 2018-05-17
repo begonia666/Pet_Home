@@ -16,9 +16,9 @@
     <div id="main_window">
         <h1>
             {% if not form.instance.master.pk %}
-            Add Dog
+                <h3>Add Dog</h3>
             {% else %}
-            Update Dog Info
+                <h3>Update Dog Info</h3>
             {% endif %}
         </h1>
         <form method="POST">
