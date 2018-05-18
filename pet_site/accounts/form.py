@@ -15,6 +15,10 @@ class UserSignUpForm(forms.ModelForm):
             'password': forms.PasswordInput()
         }
 
+        labels = {
+            'user_name': 'Name'
+        }
+
     def clean_email(self):
         email = self.cleaned_data['email']
         if Client.objects.filter(email=email).count() > 0:
