@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+{% block body_block %}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <div class="container">
+        <div id="main_window">
+           <p>Invalid Email or Password</p>
+
+            <a class="btn btn-warning" href="{% url 'accounts:login' %}">
+                Back <i class="fas fa-times-circle"></i>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

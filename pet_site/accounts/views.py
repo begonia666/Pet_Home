@@ -23,7 +23,6 @@ from django.shortcuts import get_object_or_404
 
 
 
-
 def login_home_page(request):
     isLogin = False
     valid_client = Client.objects.filter(email=request.session.get('current_email'), password=request.session.get('current_password'))
@@ -69,7 +68,7 @@ def register_page(request):
 
             registered = True
         else:
-            print(user_form.errors, dog_form.errors)
+            HttpResponse(user_form.errors, dog_form.errors)
 
     else:
         user_form = UserSignUpForm()
@@ -88,7 +87,8 @@ def login_page(request):
         email = request.POST.get('userEmail')
         password = request.POST.get('userPassword')
         valid_client = Client.objects.filter(email=email, password=password)
-        if valid_client is not None:
+
+        if len(valid_client) == 1:
 
             request.session['current_email'] = email
             request.session['current_password'] = password
@@ -103,7 +103,8 @@ def login_page(request):
                                                  'display_username': display_username,
                                                  'user_pk': pk})
         else:
-            return HttpResponse('Invalid User Name or Password')
+            return render(request, 'accounts/login_fail.html')
+
     else:
         return render(request, 'accounts/login.html', {'isLogin': isLogin})
 
