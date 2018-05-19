@@ -23,7 +23,7 @@ urlpatterns = [
 
     url(r"(?P<pk>[0-9]+)/update_dog/$", views.DogUpdateView.as_view(), name="dog_update"),
 
-    url(r"(?P<pk>[0-9]+)/(?P<dog_pk>[0-9]+)/(?P<dogname>\S+)/(?P<username>\S+)/delete_dog/$", views.DogDeleteView.as_view(), name="dog_delete"),
+    url(r"(?P<pk>[0-9]+)/(?P<dog_pk>[0-9]+)/(?P<dogname>\S+)/delete_dog/$", views.DogDeleteView.as_view(), name="dog_delete"),
 
     url(r"(?P<pk>[0-9]+)/update_user/$", views.UserUpdateView.as_view(), name="profile_update"),
 ]

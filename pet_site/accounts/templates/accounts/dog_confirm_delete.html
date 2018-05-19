@@ -8,7 +8,7 @@
 
         <form method="post">
             {% csrf_token %}
-            <p>Dear {{ object.username }}</p>
+            <p>Dear Client</p>
             <p>Are you sure you want to delete "{{ object.dog_name }}"?</p>
 
             <button type="submit" class="btn btn-danger" value="Delete">Confirm <i class="fas fa-check-circle"></i></button>

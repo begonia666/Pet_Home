@@ -149,7 +149,7 @@ class DogUpdateView(UpdateView, LoginRequiredMixin):
 
 class DogDeleteView(DeleteView, LoginRequiredMixin):
     model = Dog
-    success_url = reverse_lazy('accounts:profile')
+    # success_url = reverse_lazy('accounts:profile', kwargs={'pk': client})
     template_name = 'accounts/dog_confirm_delete.html'
 
     def get_object(self, queryset=None):
@@ -160,7 +160,6 @@ class DogDeleteView(DeleteView, LoginRequiredMixin):
         client = self.kwargs['pk']
         dog = self.kwargs['dog_pk']
         dog_name = self.kwargs['dogname']
-        user_name = self.kwargs['username']
 
         queryset = Dog.objects.filter(master=client, pk=dog)
 
@@ -168,7 +167,7 @@ class DogDeleteView(DeleteView, LoginRequiredMixin):
             return HttpResponse('No Such a Dog! ')
         else:
 
-            context = {'client_pk': client, 'dog_id': dog, 'dog_name': dog_name, 'username': user_name}
+            context = {'client_pk': client, 'dog_id': dog, 'dog_name': dog_name}
             return context
 
         # Override the delete function to delete report Y from client X

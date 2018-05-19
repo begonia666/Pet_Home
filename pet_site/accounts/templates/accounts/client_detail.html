@@ -63,7 +63,7 @@
 
                     <p><a class="btn btn-warning" href="{% url 'accounts:dog_update' pk=each_dog.pk %}">Edit This Dog <i class="fas fa-edit"></i></a></p>
                     <p>
-                        <a class="btn btn-danger" href="{% url 'accounts:dog_delete' pk=client_details.pk dog_pk=each_dog.pk dogname=each_dog.dog_name username=client_details.user_name%}">
+                        <a class="btn btn-danger" href="{% url 'accounts:dog_delete' pk=client_details.pk dog_pk=each_dog.pk dogname=each_dog.dog_name%}">
                             Delete This Dog <i class="fas fa-trash-alt"></i>
                         </a>
                     </p>
